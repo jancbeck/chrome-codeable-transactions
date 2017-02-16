@@ -1,0 +1,27 @@
+{
+  "name": "Codeable Transaction Exporter",
+  "description": "Exports your Codeable transactions to CSV",
+  "version": "1.1",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": { 
+           "16": "icon.png",
+           "48": "icon48.png",
+          "128": "icon128.png",
+          "400": "icon400.png" 
+        },
+  "permissions": [
+    "downloads", "storage", "tabs", "https://app.codeable.io/users/transactions"
+  ],
+  "browser_action": {
+      "default_title": "Export transactions!",
+      "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["https://app.codeable.io/users/transactions"],
+    "js": ["content.js", "jquery-3.1.1.slim.min.js"]
+  }],
+  "manifest_version": 2
+}
