@@ -1,12 +1,12 @@
 # Codeable Transaction Exporter Chrome Extension
 
-Exports your Codeable transactions to CSV
+Exports your Codeable transactions to a CSV file
 
 ## Installation
 
 1. Clone this repo.
 
-2. Visit [chrome://extensions](chrome://extensions) in your browser (or open up the Chrome menu by clicking the icon to the far right of the Omnibox and select Extensions under the Tools menu to get to the same place).
+2. Visit chrome://extensions` in your browser (or open up the Chrome menu by clicking the icon to the far right of the Omnibox and select Extensions under the Tools menu to get to the same place).
 
 3. Ensure that the Developer mode checkbox in the top right-hand corner is checked.
 
