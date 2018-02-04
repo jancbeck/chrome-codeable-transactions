@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
     if (msg.text === 'report_back') {
 
 		var items = [];
-		var clientPattern = /Project for (.+) completed:/ 
+		var clientPattern = /Project for (.+?)(?=\scompleted) .*/ 
 		var refundedPattern = /Project was (partially )?refunded/
 
 		$(".transaction-wrapper").each(function(index, transactionWrapper) {
@@ -13,7 +13,7 @@ chrome.runtime.onMessage.addListener(function (msg, sender, sendResponse) {
 
 	    	$(".transaction", transactionWrapper).each(function(index, transaction) {
 
-	    		var transactionHeading = $( "div.details > div.left-side > div > span.ng-binding:first-child", transaction).text();
+	    		var transactionHeading = $( "div.details > div.left-side > .bluishGray-text", transaction).text();
 	    		var item = { date: date.toISOString() };
 
 	    		if ( clientPattern.test( transactionHeading ) ) {

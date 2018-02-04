@@ -29,6 +29,7 @@ While logged into Codeable, visit the [transactions page](https://app.codeable.i
 ## History
 
 - **v1.0.0**: Initial release
+- **v1.0.1**: Compatibility fix for 2018
 
 ## License
 
